@@ -1,0 +1,257 @@
+/* Default Layout: 992px.
+ * Gutters: 24px.
+ * Outer margins: 48px.
+ * Leftover space for scrollbars @1024px: 32px.
+ */
+
+body {
+  width: 896px;
+  margin: 0 auto;
+  padding: 56px 48px 84px;
+  background:#efefef;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+header {
+	text-align:center;
+	margin:0 0 10px;
+}
+
+header object { /* logo */
+	width:100%;
+	height:250px;
+}
+
+nav a {
+	width:33.3%;
+	display:block;
+	float:left;
+	background:white;
+	text-align:center;
+	margin:0;
+	padding:0;
+	border:1px solid #ccc;
+	padding:10px 0;
+	color:black;
+	text-decoration:none;
+	font-size:1em;
+}
+
+nav a:hover {
+	background:#ccc;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height:0;
+}
+
+/* Tablet Layout: 768px.
+ * Gutters: 24px.
+ * Outer margins: 28px.
+ * Inherits styles from: Default Layout.
+ */
+
+@media (max-width: 768px) {
+	body {
+  		width: 712px;
+		background: cyan;
+		padding: 24px;
+	}
+
+	nav a {
+		width:33.3%;
+		display:block;
+		float:left;
+		background:white;
+		text-align:center;
+		margin:0;
+		padding:0;
+		border:1px solid #ccc;
+		padding:10px 0;
+		color:black;
+		text-decoration:none;
+		font-size:1em;
+	}
+
+	.clearfix:after {
+		content: ".";
+		display: block;
+		clear: both;
+		visibility: hidden;
+		line-height: 0;
+		height:0;
+	}
+
+}
+
+/* Wide Mobile Layout (Landscape): 480px.
+ * Gutters: 24px.
+ * Outer margins: 22px.
+ * Inherits styles from: Default Layout, Mobile Layout.
+ */
+
+@media (max-width: 480px) {
+
+	body {
+  		width: 436px;
+		background: limegreen;
+		padding: 24px;
+	}
+
+	header {
+		text-align:left;
+		margin-right: 0px;
+	}
+
+	header object { /* logo */
+		margin: 10px;
+		width:30%;
+		height:200px;
+		padding-right: 0;
+	}
+
+	nav a {
+		width: 60%;
+		display:block;
+		float:right;
+		background:white;
+		text-align:center;
+		margin:0;
+		padding:0;
+		border:1px solid #ccc;
+		padding:10px 0;
+		color:black;
+		text-decoration:none;
+		font-size:2em;
+	}
+
+	.clearfix:after {
+		content: ".";
+		display: block;
+		clear: none;
+		visibility: hidden;
+		line-height: 0;
+		height:0;
+	}
+
+}
+
+
+/* Mobile Layout (portrait): 320px.
+ * Gutters: 24px.
+ * Outer margins: 34px.
+ * Inherits styles from: Default Layout.
+ */
+@media (max-width: 320px) {
+	body {
+  		width: 252px;
+		background: magenta;
+		padding: 24px;
+	}
+
+	header {
+		text-align:center;
+		margin:0 0 10px;
+	}
+
+	header object { /* logo */
+		float: left;
+		width:100%;
+		height:250px;
+	}
+
+	nav a {
+		width: 90%;
+		display:inline-block;
+		float:right;
+		background:white;
+		text-align:center;
+		margin:0;
+		padding:0;
+		border:1px solid #ccc;
+		padding:10px 0;
+		color:black;
+		text-decoration:none;
+		font-size:2em;
+	}
+
+	.clearfix:after {
+		content: ".";
+		display: block;
+		clear: right;
+		visibility: hidden;
+		line-height: 0;
+		height:0;
+	}
+
+
+}
+
+/* Printable Layout
+ * Inherits styles from: Default Layout.
+ */
+
+ @media print{
+
+	body {
+		margin: 0; 
+		padding: 0;
+		line-height: 1.4em;
+		word-spacing: 1px;
+		letter-spacing: 0.2px;
+		font: 13;
+		background: #fff;
+	}
+
+	header {
+		text-align:left;
+		margin:0 0 10px;
+	}
+
+	header object { /* logo */
+		text-align: left;
+		width:100%;
+		height:250px;
+	}
+
+	nav a {
+		display:block;
+		float:left;
+		background:white;
+		text-align:center;
+		border: none;
+		color:black;
+		font-size:1em;
+	}
+
+}
+
+
+
+
+/* RESOURCES & EXAMPLES
+
+Media Query Tutorials:
+
+http://mobile.smashingmagazine.com/2010/07/19/how-to-use-css3-media-queries-to-create-a-mobile-version-of-your-website/
+
+http://webdesignerwall.com/tutorials/css3-media-queries
+
+Creating Responsive SVG Image Tutorial: 
+
+http://www.joshuasortino.com/journal/creating-a-responsive-svg
+
+Example Sites:
+
+http://owltastic.com/
+
+http://sweethatclub.org/
+
+http://www.alistapart.com/d/responsive-web-design/ex/ex-site-FINAL.html
+
+*/
